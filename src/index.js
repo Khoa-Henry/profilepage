@@ -5,7 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    {/* them provider here */}
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

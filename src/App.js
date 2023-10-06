@@ -13,7 +13,6 @@ import Footer from "./Components/Footer";
 import { pageRoutes } from "./app/pageRoutes";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 
 const { home, about } = pageRoutes;
 
@@ -23,6 +22,7 @@ export const ColorModeContext = React.createContext({
 
 function App() {
   const [mode, setMode] = React.useState("light");
+  console.log(mode, "$$");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {

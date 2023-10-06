@@ -8,8 +8,11 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import gitHub from "../../Pics/github.png";
+import gitHubDark from "../../Pics/github-dark.png";
 import linkedin from "../../Pics/linkendin.png";
+import linkedinDark from "../../Pics/linkedin-dark.png";
 import { pageRoutes } from "../../app/pageRoutes";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const styles = useStyles();
@@ -55,8 +58,10 @@ const Home = () => {
           </header>
           <Grid container direction="row" spacing={2} style={styles.spacing}>
             <Grid item xs="auto">
-              <Button variant="contained" href={pageRoutes.about}>
-                Learn More About Me
+              <Button variant="contained">
+                <Link to={pageRoutes.about} style={styles.linkClear}>
+                  Learn More About Me
+                </Link>
               </Button>
             </Grid>
             <Grid item xs="auto">
@@ -66,7 +71,9 @@ const Home = () => {
                 target="blank"
                 startIcon={
                   <img
-                    src={linkedin}
+                    src={
+                      theme.palette.mode === "light" ? linkedin : linkedinDark
+                    }
                     style={styles.logo}
                     alt="the linkedin logo"
                   />
@@ -81,7 +88,11 @@ const Home = () => {
                 href="https://github.com/Khoa-Henry"
                 target="blank"
                 startIcon={
-                  <img src={gitHub} style={styles.logo} alt="the github logo" />
+                  <img
+                    src={theme.palette.mode === "light" ? gitHub : gitHubDark}
+                    style={styles.logo}
+                    alt="the github logo"
+                  />
                 }
               >
                 Github

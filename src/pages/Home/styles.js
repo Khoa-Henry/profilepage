@@ -24,6 +24,13 @@ const useStyles = () => ({
   header: {
     fontWeight: "bold",
   },
+  linkClear: {
+    textDecoration: "none",
+    color: "inherit",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
 });
 
 export default useStyles;

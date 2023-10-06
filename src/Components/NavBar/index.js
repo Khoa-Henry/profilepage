@@ -15,13 +15,14 @@ import React, { useContext, useState } from "react";
 import { ColorModeContext } from "../../App";
 import { pageRoutes } from "../../app/pageRoutes";
 import useStyles from "./styles";
+import { Link } from "react-router-dom";
 
 const { home, about, contact } = pageRoutes;
 
 const navItems = [
   { label: "Home", route: home },
   { label: "About Me", route: about },
-  // { label: "Contact", route: contact },
+  { label: "Contact", route: contact },
 ];
 
 const NavBar = () => {
@@ -43,15 +44,11 @@ const NavBar = () => {
     <AppBar>
       <Container>
         <Toolbar disableGutters>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href={home}
-            sx={styles.logoWebView}
-          >
-            KHOA HENRY NGUYEN
-          </Typography>
+          <Link to={home} style={styles.linkClear}>
+            <Typography variant="h5" noWrap sx={styles.logoWebView}>
+              KHOA HENRY NGUYEN
+            </Typography>
+          </Link>
 
           <Box sx={styles.webNav}>
             <IconButton
@@ -83,29 +80,23 @@ const NavBar = () => {
               {navItems.map((item, i) => {
                 const itemKey = `menuItem${i}`;
                 return (
-                  <MenuItem onClick={handleCloseNavMenu} key={itemKey}>
-                    <Typography
-                      textAlign="center"
-                      noWrap
-                      component="a"
-                      style={{ textDecoration: "none" }}
-                      href={item.route}
-                    >
+                  <MenuItem
+                    onClick={handleCloseNavMenu}
+                    key={itemKey}
+                    sx={styles.linkClear}
+                  >
+                    <Link to={item.route} style={styles.linkClear}>
                       {item.label}
-                    </Typography>
+                    </Link>
                   </MenuItem>
                 );
               })}
             </Menu>
           </Box>
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href={home}
-            sx={styles.logoMobileView}
-          >
-            KHN
+          <Typography variant="h4" noWrap sx={styles.logoMobileView}>
+            <Link to={home} style={styles.linkClear}>
+              KHN
+            </Link>
           </Typography>
           <Box sx={styles.filterBox}></Box>
 
@@ -116,11 +107,17 @@ const NavBar = () => {
               return (
                 <Button
                   key={buttonKey}
-                  href={item.route}
+                  color="inherit"
                   onClick={handleCloseNavMenu}
                   sx={styles.buttonNav}
                 >
-                  {item.label}
+                  <Link
+                    onClick={handleCloseNavMenu}
+                    to={item.route}
+                    style={styles.linkClear}
+                  >
+                    {item.label}
+                  </Link>
                 </Button>
               );
             })}

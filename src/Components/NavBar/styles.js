@@ -5,8 +5,6 @@ const useStyles = () => ({
     fontFamily: "monospace",
     fontWeight: 700,
     letterSpacing: ".2rem",
-    color: "inherit",
-    textDecoration: "none",
   },
   logoMobileView: {
     mr: 2,
@@ -16,7 +14,6 @@ const useStyles = () => ({
     fontWeight: 700,
     letterSpacing: ".3rem",
     color: "inherit",
-    textDecoration: "none",
   },
   webNav: {
     flexGrow: 1,
@@ -28,11 +25,20 @@ const useStyles = () => ({
   },
   buttonNav: {
     my: 2,
-    color: "white",
     display: { xs: "none", md: "inline-block" },
+    "&:hover": {
+      textDecoration: "underline",
+    },
   },
   menuButton: {
     display: { xs: "block", md: "none" },
+  },
+  linkClear: {
+    textDecoration: "none",
+    color: "inherit",
+    "&:hover": {
+      textDecoration: "underline",
+    },
   },
 });
 
