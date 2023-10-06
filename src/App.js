@@ -11,24 +11,56 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import { pageRoutes } from "./app/pageRoutes";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
 
 const { home, about } = pageRoutes;
 
-function App() {
-  return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route exact path={home}>
-          <Home />
-        </Route>
+export const ColorModeContext = React.createContext({
+  toggleColorMode: () => {},
+});
 
-        <Route path={about}>
-          <AboutMe />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+function App() {
+  const [mode, setMode] = React.useState("light");
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path={home}>
+              <Home />
+            </Route>
+
+            <Route path={about}>
+              <AboutMe />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 

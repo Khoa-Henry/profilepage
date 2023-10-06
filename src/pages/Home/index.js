@@ -6,7 +6,6 @@ import Me from "../../Pics/me.jpg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import gitHub from "../../Pics/github.png";
 import linkedin from "../../Pics/linkendin.png";
@@ -54,35 +53,41 @@ const Home = () => {
               deliver as a dedicated and industrious front-end/React developer.
             </Typography>
           </header>
-          <Stack direction="row" spacing={2} style={styles.spacing}>
-            <Button variant="contained" href={pageRoutes.about}>
-              Learn More About Me
-            </Button>
-            <Button
-              variant="outlined"
-              href="https://www.linkedin.com/in/khoahenrynguyen/"
-              target="blank"
-              startIcon={
-                <img
-                  src={linkedin}
-                  style={styles.logo}
-                  alt="the linkedin logo"
-                />
-              }
-            >
-              Linkedin
-            </Button>
-            <Button
-              variant="outlined"
-              href="https://github.com/Khoa-Henry"
-              target="blank"
-              startIcon={
-                <img src={gitHub} style={styles.logo} alt="the github logo" />
-              }
-            >
-              Github
-            </Button>
-          </Stack>
+          <Grid container direction="row" spacing={2} style={styles.spacing}>
+            <Grid item xs="auto">
+              <Button variant="contained" href={pageRoutes.about}>
+                Learn More About Me
+              </Button>
+            </Grid>
+            <Grid item xs="auto">
+              <Button
+                variant="outlined"
+                href="https://www.linkedin.com/in/khoahenrynguyen/"
+                target="blank"
+                startIcon={
+                  <img
+                    src={linkedin}
+                    style={styles.logo}
+                    alt="the linkedin logo"
+                  />
+                }
+              >
+                Linkedin
+              </Button>
+            </Grid>
+            <Grid item xs="auto">
+              <Button
+                variant="outlined"
+                href="https://github.com/Khoa-Henry"
+                target="blank"
+                startIcon={
+                  <img src={gitHub} style={styles.logo} alt="the github logo" />
+                }
+              >
+                Github
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Container>

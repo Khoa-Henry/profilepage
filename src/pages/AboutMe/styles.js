@@ -1,3 +1,5 @@
+import blueDoodle from "../../Pics/blueDoodle.jpg";
+
 const useStyles = () => ({
   container: {
     paddingTop: "140px",
@@ -6,6 +8,7 @@ const useStyles = () => ({
   divider: {
     border: "2px solid gray",
     marginBottom: "16px",
+    borderRadius: "2px",
   },
   resume: {
     paddingTop: "150px",
@@ -20,6 +23,15 @@ const useStyles = () => ({
   },
   header: {
     fontWeight: "500",
+  },
+  background: {
+    backgroundImage: `url("${blueDoodle}")`,
+    height: "100%",
+    width: "auto",
+    objectFit: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
 });
 

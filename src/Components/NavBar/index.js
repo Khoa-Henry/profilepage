@@ -1,14 +1,18 @@
-import * as React from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import React, { useContext, useState } from "react";
+import { ColorModeContext } from "../../App";
 import { pageRoutes } from "../../app/pageRoutes";
 import useStyles from "./styles";
 
@@ -21,7 +25,9 @@ const navItems = [
 ];
 
 const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
 
   const styles = useStyles();
 
@@ -34,7 +40,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar>
       <Container>
         <Toolbar disableGutters>
           <Typography
@@ -118,6 +124,17 @@ const NavBar = () => {
                 </Button>
               );
             })}
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={colorMode.toggleColorMode}
+              color="inherit"
+            >
+              {theme.palette.mode === "dark" ? (
+                <Brightness7Icon />
+              ) : (
+                <Brightness4Icon />
+              )}
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>

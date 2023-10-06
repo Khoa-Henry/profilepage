@@ -1,15 +1,14 @@
 import useStyles from "./styles";
+import AppBar from "@mui/material/AppBar";
 
 export default function Footer() {
   const styles = useStyles();
 
   return (
-    <footer
-      id="footer"
-      className="w-100 bg-light text-center"
-      style={styles.footer}
-    >
-      ©2023 Khoa Henry Nguyen | Yep
+    <footer id="footer">
+      <AppBar style={styles.footer} position="static">
+        ©2023 Khoa Henry Nguyen | Yep
+      </AppBar>
     </footer>
   );
 }

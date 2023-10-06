@@ -20,11 +20,10 @@ const useStyles = () => ({
   },
   spacing: { paddingBottom: "32px" },
   divider: {
-    borderWidth: "0",
-    borderStyle: "solid",
-    borderColor: " rgba(0, 0, 0, 0.12)",
-    borderBottomWidth: "thick",
-    paddingTop: "16px",
+    border: "1.5px solid gray",
+    marginTopTop: "16px",
+    opacity: ".32",
+    borderRadius: "2px",
   },
 });
 
