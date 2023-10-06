@@ -7,7 +7,7 @@ const useStyles = () => ({
     letterSpacing: ".2rem",
   },
   logoMobileView: {
-    mr: 2,
+    mr: 1,
     display: { xs: "flex", md: "none" },
     flexGrow: 1,
     fontFamily: "monospace",

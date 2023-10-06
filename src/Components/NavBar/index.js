@@ -93,6 +93,7 @@ const NavBar = () => {
               })}
             </Menu>
           </Box>
+
           <Typography variant="h4" noWrap sx={styles.logoMobileView}>
             <Link to={home} style={styles.linkClear}>
               KHN
