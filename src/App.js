@@ -22,7 +22,7 @@ export const ColorModeContext = React.createContext({
 });
 
 function App() {
-  const [mode, setMode] = React.useState("light");
+  const [mode, setMode] = React.useState("dark");
   console.log(mode, "$$");
   const colorMode = React.useMemo(
     () => ({

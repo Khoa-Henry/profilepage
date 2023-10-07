@@ -31,7 +31,7 @@ const AboutMe = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant="subtitle1">
-            Hey, my name us Khoa Henry Nguyen and I got by Henry. I am a
+            Hey, my name is Khoa Henry Nguyen and I go by Henry. I am a
             dedicated software engineer with a knack for problem-solving and a
             extensive experience in web development. I'm proficient in various
             programming languages, always eager to learn, and excel in
