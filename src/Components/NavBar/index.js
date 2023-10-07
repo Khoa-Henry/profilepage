@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ColorModeContext } from "../../App";
 import { pageRoutes } from "../../app/pageRoutes";
 import useStyles from "./styles";
@@ -31,6 +31,7 @@ const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
+  const { pathname } = useLocation();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -99,6 +100,7 @@ const NavBar = () => {
                         </Grid>
                         {navItems.map((item, i) => {
                           const itemKey = `menuItem${i}`;
+                          const isCurrentPage = pathname === item.route;
 
                           return (
                             <Link
@@ -107,7 +109,16 @@ const NavBar = () => {
                               key={itemKey}
                               onClick={handleCloseNavMenu}
                             >
-                              <Typography sx={styles.navButton}>
+                              <Typography
+                                sx={
+                                  isCurrentPage
+                                    ? {
+                                        ...styles.navButton,
+                                        ...styles.currentLocationMobile,
+                                      }
+                                    : styles.navButton
+                                }
+                              >
                                 {item.label}
                               </Typography>
                             </Link>
@@ -142,6 +153,7 @@ const NavBar = () => {
                 <Grid container alignItems="center" item xs="auto">
                   {navItems.map((item, i) => {
                     const linkButton = `linkButton${i}`;
+                    const isCurrentPage = pathname === item.route;
 
                     return (
                       <Grid item key={linkButton}>
@@ -150,7 +162,16 @@ const NavBar = () => {
                           to={item.route}
                           style={styles.clearLink}
                         >
-                          <Typography sx={styles.navButton}>
+                          <Typography
+                            sx={
+                              isCurrentPage
+                                ? {
+                                    ...styles.navButton,
+                                    ...styles.currentLocationWeb,
+                                  }
+                                : styles.navButton
+                            }
+                          >
                             {item.label}
                           </Typography>
                         </Link>

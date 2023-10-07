@@ -47,7 +47,7 @@ const AboutMe = () => {
             variant="text"
             startIcon={<DownloadIcon color="primary" />}
           >
-            Download My Resume
+            <Typography variant="subtitle1">Download My Resume</Typography>
           </Button>
         </Grid>
 
