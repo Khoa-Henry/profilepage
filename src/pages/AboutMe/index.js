@@ -42,8 +42,9 @@ const AboutMe = () => {
 
         <Grid item xs={12} style={styles.spacing}>
           <Button
+            href="resume.pdf"
+            download="Khoa Henry Nguyen's resume.pdf"
             variant="text"
-            target="blank"
             startIcon={<DownloadIcon color="primary" />}
           >
             Download My Resume
