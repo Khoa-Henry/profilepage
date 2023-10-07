@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer id="footer">
-      <AppBar style={styles.footer} position="static">
+      <AppBar style={styles.footer} position="static" color="inherit">
         ©2023 Khoa Henry Nguyen | Yep
       </AppBar>
     </footer>

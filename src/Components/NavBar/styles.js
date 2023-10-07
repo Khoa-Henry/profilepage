@@ -1,4 +1,4 @@
-const useStyles = () => ({
+const useStyles = (colorMode) => ({
   clearLink: {
     textDecoration: "none",
     color: "inherit",
@@ -9,15 +9,17 @@ const useStyles = () => ({
     letterSpacing: ".3rem",
     "&:hover": {
       textDecoration: "underline",
+      color: colorMode === "dark" ? " #90caf9" : "inherit",
     },
   },
   navButton: {
     textDecoration: "none",
     color: "inherit",
-    padding: "6px 12px",
+    padding: "10px 20px",
     borderRadius: "3px",
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.04)",
+      color: colorMode === "dark" ? " #90caf9" : "inherit",
     },
   },
   mobileLogo: {
@@ -26,6 +28,7 @@ const useStyles = () => ({
     letterSpacing: ".3rem",
     "&:hover": {
       textDecoration: "underline",
+      color: colorMode === "dark" ? " #90caf9" : "inherit",
     },
   },
 });

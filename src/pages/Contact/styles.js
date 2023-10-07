@@ -9,7 +9,7 @@ const useStyles = (isMobile, colorMode) => ({
     borderRadius: "2px",
   },
   header: {
-    fontWeight: "500",
+    fontWeight: "700",
   },
   topic: {
     fontSize: isMobile ? "20px" : "24px",
@@ -21,7 +21,7 @@ const useStyles = (isMobile, colorMode) => ({
   link: {
     fontSize: isMobile ? "20px" : "24px",
     "&:hover": {
-      color: "inherit",
+      color: colorMode === "dark" ? " #90caf9" : "rgb(25, 118, 210)",
     },
   },
   icon: { verticalAlign: "top" },

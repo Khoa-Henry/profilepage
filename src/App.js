@@ -39,6 +39,13 @@ function App() {
         palette: {
           mode,
         },
+        typography: {
+          allVariants: {
+            fontFamily: "Faustina, serif",
+            // fontFamily: "Zen Tokyo Zoo",
+            textTransform: "none",
+          },
+        },
       }),
     [mode]
   );

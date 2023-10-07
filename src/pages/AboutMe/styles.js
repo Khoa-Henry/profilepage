@@ -22,7 +22,7 @@ const useStyles = () => ({
     paddingTop: "32px",
   },
   header: {
-    fontWeight: "500",
+    fontWeight: "700",
   },
   background: {
     backgroundImage: `url("${blueDoodle}")`,

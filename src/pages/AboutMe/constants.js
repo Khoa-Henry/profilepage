@@ -1,7 +1,7 @@
 export const resumeInfo = [
   {
     topic: "CERTIFICATION",
-    width: 144,
+    width: 152,
     data: [
       {
         companyName: "AWS Certified Cloud Practitioner",
@@ -12,7 +12,7 @@ export const resumeInfo = [
   },
   {
     topic: "EXPERIENCE",
-    width: 117,
+    width: 125,
     data: [
       {
         companyName: "American Family Insurance",
@@ -56,7 +56,7 @@ export const resumeInfo = [
   },
   {
     topic: "TECHNICAL SKILLS",
-    width: 180,
+    width: 190,
     data: [
       {
         companyName: "",
@@ -78,7 +78,7 @@ export const resumeInfo = [
   },
   {
     topic: "SOFT SKILLS",
-    width: 120,
+    width: 125,
     data: [
       {
         companyName: "",
@@ -94,7 +94,7 @@ export const resumeInfo = [
   },
   {
     topic: "EDUCATION",
-    width: 110,
+    width: 116,
     data: [
       {
         companyName: "Waukesha County Technical College",
