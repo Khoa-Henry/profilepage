@@ -39,7 +39,7 @@ const AboutMe = () => {
               <Grid item md={2} sm={4} xs={12}>
                 <Typography
                   variant={isMobile ? "h6" : "h5"}
-                  width={isMobile ? 65 : 70}
+                  width={isMobile ? 65 : 75}
                   sx={styles.topic}
                 >
                   EMAIL
