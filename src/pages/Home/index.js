@@ -13,6 +13,7 @@ import linkedin from "../../Pics/linkendin.png";
 import linkedinDark from "../../Pics/linkedin-dark.png";
 import { pageRoutes } from "../../app/pageRoutes";
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 const Home = () => {
   const styles = useStyles();
@@ -35,7 +36,9 @@ const Home = () => {
             <img
               src={Me}
               style={isMobile ? styles.imageMobile : styles.imageWeb}
-              className="img-fluid img"
+              className={
+                theme.palette.mode === "light" ? "img avatar" : "img avatarDark"
+              }
               alt="henry's profile headshot"
             />
           </figure>

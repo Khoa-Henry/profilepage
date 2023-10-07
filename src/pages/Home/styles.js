@@ -5,12 +5,11 @@ const useStyles = () => ({
   },
   imageWeb: {
     borderRadius: "50%",
-    boxShadow: " 5px 5px 6px 5px #ccc",
+    width: "100%",
   },
   imageMobile: {
     borderRadius: "50%",
     width: "60%",
-    boxShadow: " 5px 5px 6px 5px #ccc",
   },
   imageContainer: {
     textAlign: "center",

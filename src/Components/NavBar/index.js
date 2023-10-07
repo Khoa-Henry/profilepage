@@ -21,7 +21,7 @@ const { home, about, contact } = pageRoutes;
 
 const navItems = [
   { label: "Home", route: home },
-  { label: "About Me", route: about },
+  { label: "About", route: about },
   { label: "Contact", route: contact },
 ];
 
