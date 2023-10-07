@@ -4,7 +4,7 @@ const useStyles = () => ({
     color: "inherit",
   },
   webLogo: {
-    fontFamily: "monospace",
+    fontFamily: "Zen Tokyo Zoo",
     fontWeight: 700,
     letterSpacing: ".3rem",
     "&:hover": {
@@ -21,7 +21,7 @@ const useStyles = () => ({
     },
   },
   mobileLogo: {
-    fontFamily: "monospace",
+    fontFamily: "Zen Tokyo Zoo",
     fontWeight: 700,
     letterSpacing: ".3rem",
     "&:hover": {
