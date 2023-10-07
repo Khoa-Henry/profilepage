@@ -7,9 +7,9 @@ import Typography from "@mui/material/Typography";
 
 const ResumeInfoSection = (props) => {
   const { resumeInfo } = props;
-  const styles = useStyles();
-
   const theme = useTheme();
+  const styles = useStyles(theme.palette.mode);
+
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (

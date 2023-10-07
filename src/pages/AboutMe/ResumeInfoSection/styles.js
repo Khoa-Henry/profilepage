@@ -1,6 +1,9 @@
-const useStyles = () => ({
+const useStyles = (colorMode) => ({
   topic: {
-    borderBottom: "4px solid #1976d2",
+    borderBottom:
+      colorMode === "dark"
+        ? "4px solid #90caf9"
+        : "4px solid rgb(25, 118, 210)",
   },
   contentTitle: {
     fontWeight: "bold",
