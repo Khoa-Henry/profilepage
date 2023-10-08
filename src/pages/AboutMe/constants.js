@@ -31,11 +31,9 @@ export const resumeInfo = [
         companyName: "i.c.stars |* Milwaukee",
         subTitle: "Soft Engineer Intern * Jul 2020 - Nov 2020",
         info: [
-          "Redesigned and maintained our existing website using Weebly. (https://www.tier1gl.com)",
-          "Helped configure server computers and client computers, 40+ computers.",
-          "Troubleshooted Windows and gaming center software on client computers.",
-          "Worked with a team of 4 to plan and run events and tournaments.",
-          "Helped to set up the client's computer hardware.",
+          "Initialized the process of designing a wireframe, and a workflow model, and using React.js to build a mobile app. (Paylocity App) ",
+          "Collaborated with the team and end-users to identify requirements, designs, and solutions for our client, Paylocity. Reimagine the current Paylocity App to a modern application that engages the user and builds a community for all users.",
+          "Communicated with professionals in the IT field, project managers, CIOs, etc.",
         ],
       },
       {
@@ -73,6 +71,17 @@ export const resumeInfo = [
           "SQL",
           "C++",
         ],
+      },
+    ],
+  },
+  {
+    topic: "PROJECTS",
+    width: 98,
+    data: [
+      {
+        companyName: "",
+        subTitle: "Checkout My Github for All of My Projects",
+        info: [],
       },
     ],
   },
