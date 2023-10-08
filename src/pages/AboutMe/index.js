@@ -7,6 +7,7 @@ import ResumeInfoSection from "./ResumeInfoSection";
 import { resumeInfo } from "./constants";
 import Button from "@mui/material/Button";
 import DownloadIcon from "@mui/icons-material/Download";
+import SEO from "../../Components/SEO";
 
 const AboutMe = () => {
   const styles = useStyles();
@@ -14,6 +15,11 @@ const AboutMe = () => {
   return (
     // <div style={styles.background}>
     <Container style={styles.container}>
+      <SEO
+        title="KHN: Discover More Information About Me"
+        description="Learn more about Khoa Henry Nguyen on his 'About Me' page. Discover the story, background, and aspirations that define his unique journey and personality."
+        keyWords="software engineer, web development, programming languages, clean code, user-friendly design, AWS Certified Cloud Practitioner, application development, digital sales platform, web design, IT specialist"
+      />
       <Grid
         container
         direction="row-reverse"

@@ -14,6 +14,7 @@ import linkedinDark from "../../Pics/linkedin-dark.png";
 import { pageRoutes } from "../../app/pageRoutes";
 import { Link } from "react-router-dom";
 import "./styles.css";
+import SEO from "../../Components/SEO";
 
 const Home = () => {
   const styles = useStyles();
@@ -23,6 +24,12 @@ const Home = () => {
 
   return (
     <Container>
+      <SEO
+        title="KHN: Get To Know About Me"
+        description="Explore the world of Khoa Henry Nguyen through his personal website. Discover his journey, interests, and passions. Join him on his adventures and insights."
+        keyWords="Khoa Henry Nguyen, Application Development Engineer, American Family Insurance, Experienced Front-end Developer, Robust skill set, Application development, Web design, Cloud computing, IT support, Front-end/React developer"
+      />
+
       <Grid
         style={styles.container}
         container

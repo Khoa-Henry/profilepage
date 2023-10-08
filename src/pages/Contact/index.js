@@ -7,6 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Link from "@mui/material/Link";
+import SEO from "../../Components/SEO";
 
 const AboutMe = () => {
   const theme = useTheme();
@@ -15,6 +16,12 @@ const AboutMe = () => {
 
   return (
     <Container style={styles.container}>
+      <SEO
+        title="KHN: Get In Touch With Me"
+        description="Connect with Khoa Henry Nguyen through the 'Contact' page. Reach out, share thoughts, or collaborate on exciting opportunities. Let's start a conversation today."
+        keyWords="Contact Email, Social Media Contacts, Email Marketing Tips, Engaging Instagram Content, Building LinkedIn Connections, Optimizing Email Campaigns, Instagram Growth Strategies, LinkedIn Networking Tips, Effective Email Communication, Social Media Branding"
+      />
+
       <Grid
         container
         direction="row-reverse"
