@@ -28,6 +28,9 @@ const useStyles = (colorMode) => ({
     opacity: ".32",
     borderRadius: "2px",
   },
+  logo: {
+    height: "20px",
+  },
 });
 
 export default useStyles;

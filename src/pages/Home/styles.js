@@ -1,4 +1,4 @@
-const useStyles = () => ({
+const useStyles = (colorMode) => ({
   container: {
     marginTop: "140px",
     marginBottom: "140px",
@@ -23,11 +23,20 @@ const useStyles = () => ({
   header: {
     fontWeight: "bold",
   },
-  linkClear: {
+  clearLink: {
     textDecoration: "none",
     color: "inherit",
+  },
+  navButton: {
+    padding: "10.75px 15px",
+    borderRadius: "3px",
+    backgroundColor:
+      colorMode === "dark" ? "rgb(144, 202, 249)" : "rgb(25, 118, 210)",
+    color: colorMode === "dark" ? "rgba(0, 0, 0, 0.87)" : "white",
     "&:hover": {
-      textDecoration: "underline",
+      backgroundColor:
+        colorMode === "dark" ? "rgb(66, 165, 245)" : "rgb(0, 86, 179)",
+      color: colorMode === "dark" ? "rgb(0, 86, 179)" : "white",
     },
   },
 });

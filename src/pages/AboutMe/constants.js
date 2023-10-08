@@ -79,8 +79,8 @@ export const resumeInfo = [
     width: 98,
     data: [
       {
-        companyName: "",
-        subTitle: "Checkout My Github for All of My Projects",
+        companyName: "Checkout My Github for All of My Projects",
+        subTitle: "",
         info: [],
       },
     ],

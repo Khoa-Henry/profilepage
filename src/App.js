@@ -15,6 +15,7 @@ import { pageRoutes } from "./app/pageRoutes";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { HelmetProvider } from "react-helmet-async";
 
 const { home, about, contact } = pageRoutes;
 
@@ -53,29 +54,33 @@ function App() {
     [mode]
   );
 
+  const helmetContext = {};
+
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Router>
-          <NavBar />
-          <Switch>
-            <Route exact path={home}>
-              <Home />
-            </Route>
+    <HelmetProvider context={helmetContext}>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router>
+            <NavBar />
+            <Switch>
+              <Route exact path={home}>
+                <Home />
+              </Route>
 
-            <Route path={about}>
-              <AboutMe />
-            </Route>
+              <Route path={about}>
+                <AboutMe />
+              </Route>
 
-            <Route path={contact}>
-              <Contact />
-            </Route>
-          </Switch>
-          <Footer />
-        </Router>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+              <Route path={contact}>
+                <Contact />
+              </Route>
+            </Switch>
+            <Footer />
+          </Router>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </HelmetProvider>
   );
 }
 

@@ -4,6 +4,9 @@ import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import gitHub from "../../../Pics/github.png";
+import gitHubDark from "../../../Pics/github-dark.png";
 
 const ResumeInfoSection = (props) => {
   const { resumeInfo } = props;
@@ -31,7 +34,7 @@ const ResumeInfoSection = (props) => {
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={8}>
+            <Grid container item xs={12} md={8}>
               {topic.data.map((e, i) => {
                 const dataKey = `data${i}`;
 
@@ -43,6 +46,27 @@ const ResumeInfoSection = (props) => {
                     <Typography variant="h6" style={styles.contentSubTitle}>
                       {e.subTitle}
                     </Typography>
+                    {topic.topic === "PROJECTS" && (
+                      <Button
+                        variant="text"
+                        href="https://github.com/Khoa-Henry"
+                        target="blank"
+                        style={{ fontSize: "20px" }}
+                        startIcon={
+                          <img
+                            src={
+                              theme.palette.mode === "light"
+                                ? gitHub
+                                : gitHubDark
+                            }
+                            style={styles.logo}
+                            alt="the github logo"
+                          />
+                        }
+                      >
+                        Github
+                      </Button>
+                    )}
                     <div style={styles.description}>
                       {e.info.map((item, i) => {
                         return (

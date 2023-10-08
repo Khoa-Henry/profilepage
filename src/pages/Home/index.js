@@ -17,10 +17,9 @@ import "./styles.css";
 import SEO from "../../Components/SEO";
 
 const Home = () => {
-  const styles = useStyles();
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const styles = useStyles(theme.palette.mode);
 
   return (
     <Container>
@@ -66,13 +65,19 @@ const Home = () => {
               deliver as a dedicated and industrious front-end/React developer.
             </Typography>
           </header>
-          <Grid container direction="row" spacing={2} style={styles.spacing}>
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            spacing={2}
+            style={styles.spacing}
+          >
             <Grid item xs="auto">
-              <Button variant="contained">
-                <Link to={pageRoutes.about} style={styles.linkClear}>
+              <Link to={pageRoutes.about} style={styles.clearLink}>
+                <Typography variant="button" sx={styles.navButton}>
                   Learn More About Me
-                </Link>
-              </Button>
+                </Typography>
+              </Link>
             </Grid>
             <Grid item xs="auto">
               <Button
