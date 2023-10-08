@@ -51,7 +51,7 @@ const Home = () => {
             <Typography variant="h4" color="primary">
               Application Development Engineer at American Family Insurance
             </Typography>
-            <Typography variant="body1" style={styles.spacing}>
+            <Typography variant="h6" style={styles.spacing}>
               Experienced Front-end Developer with a robust skill set
               encompassing application development, web design, cloud computing,
               and IT support. Recognized for a meticulous attention to detail,

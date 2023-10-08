@@ -40,7 +40,7 @@ const ResumeInfoSection = (props) => {
                     <Typography variant="h5" style={styles.contentTitle}>
                       {e.companyName}
                     </Typography>
-                    <Typography variant="h7" style={styles.contentSubTitle}>
+                    <Typography variant="h6" style={styles.contentSubTitle}>
                       {e.subTitle}
                     </Typography>
                     <div style={styles.description}>
@@ -48,7 +48,7 @@ const ResumeInfoSection = (props) => {
                         return (
                           <Typography
                             key={i}
-                            variant="body2"
+                            variant="body1"
                             style={styles.bulletPoints}
                           >
                             {item}

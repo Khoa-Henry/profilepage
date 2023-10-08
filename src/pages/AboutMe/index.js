@@ -30,7 +30,7 @@ const AboutMe = () => {
           <div style={styles.divider}></div>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1">
+          <Typography variant="h6">
             Hey, my name is Khoa Henry Nguyen and I go by Henry. I am a
             dedicated software engineer with a knack for problem-solving and a
             extensive experience in web development. I'm proficient in various

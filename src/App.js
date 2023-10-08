@@ -14,6 +14,7 @@ import Footer from "./Components/Footer";
 import { pageRoutes } from "./app/pageRoutes";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const { home, about, contact } = pageRoutes;
 
@@ -22,7 +23,10 @@ export const ColorModeContext = React.createContext({
 });
 
 function App() {
-  const [mode, setMode] = React.useState("light");
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+  const [mode, setMode] = React.useState(prefersDarkMode ? "dark" : "light");
+
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
