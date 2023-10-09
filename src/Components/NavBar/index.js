@@ -49,7 +49,7 @@ const NavBar = () => {
   return (
     <AppBar>
       <AnimatedCursor
-        innerSize={8}
+        innerSize={5}
         outerSize={35}
         innerScale={1}
         outerScale={1.7}
@@ -97,6 +97,25 @@ const NavBar = () => {
                     open={Boolean(anchorElNav)}
                     onClose={handleCloseNavMenu}
                   >
+                    <AnimatedCursor
+                      innerSize={5}
+                      outerSize={35}
+                      innerScale={1}
+                      outerScale={1.7}
+                      outerAlpha={0}
+                      showSystemCursor
+                      outerStyle={{
+                        border: `1px solid ${
+                          theme.palette.mode === "light" ? "#90caf9" : "#ffffff"
+                        }`,
+                      }}
+                      innerStyle={{
+                        backgroundColor: `${
+                          theme.palette.mode === "light" ? "#90caf9" : "#ffffff"
+                        }`,
+                      }}
+                      trailingSpeed={4}
+                    />
                     <Box
                       sx={{
                         width: 250,

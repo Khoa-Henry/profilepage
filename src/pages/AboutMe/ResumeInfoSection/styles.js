@@ -5,18 +5,27 @@ const useStyles = (colorMode) => ({
         ? "4px solid #90caf9"
         : "4px solid rgb(25, 118, 210)",
   },
+  accordionTitle: { fontWeight: "bold" },
+  accordionSubTitle: {
+    fontStyle: "italic",
+    opacity: "0.6",
+    fontWeight: "bold",
+  },
   contentTitle: {
     fontWeight: "bold",
+    paddingLeft: "16px",
+    paddingRight: "16px",
   },
   contentSubTitle: {
     fontStyle: "italic",
     opacity: "0.6",
     fontWeight: "bold",
+    paddingLeft: "16px",
+    paddingRight: "16px",
   },
   description: {
-    paddingLeft: "20px",
+    paddingLeft: "16px",
     marginTop: "12px",
-    marginBottom: "24px",
   },
   bulletPoints: {
     marginBottom: "12px",
@@ -31,6 +40,7 @@ const useStyles = (colorMode) => ({
   logo: {
     height: "20px",
   },
+  button: { fontSize: "20px", paddingLeft: "16px" },
 });
 
 export default useStyles;

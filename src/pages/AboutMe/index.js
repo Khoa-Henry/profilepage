@@ -4,7 +4,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import ResumeInfoSection from "./ResumeInfoSection";
-import { resumeInfo } from "./constants";
 import Button from "@mui/material/Button";
 import DownloadIcon from "@mui/icons-material/Download";
 import SEO from "../../Components/SEO";
@@ -58,7 +57,7 @@ const AboutMe = () => {
         </Grid>
 
         <Grid container spacing={4} item xs={12} style={styles.resume}>
-          <ResumeInfoSection resumeInfo={resumeInfo} />
+          <ResumeInfoSection />
         </Grid>
       </Grid>
     </Container>

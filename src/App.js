@@ -62,7 +62,7 @@ function App() {
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <AnimatedCursor
-            innerSize={8}
+            innerSize={5}
             outerSize={35}
             innerScale={1}
             outerScale={1.7}

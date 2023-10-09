@@ -10,6 +10,7 @@ const useStyles = (colorMode) => ({
     "&:hover": {
       textDecoration: "underline",
       color: colorMode === "dark" ? " #90caf9" : "inherit",
+      opacity: ".5",
     },
   },
   navButton: {
@@ -20,6 +21,7 @@ const useStyles = (colorMode) => ({
     "&:hover": {
       backgroundColor: "rgba(0, 0, 0, 0.04)",
       color: colorMode === "dark" ? " #90caf9" : "inherit",
+      opacity: ".5",
     },
   },
   currentLocationWeb: {
@@ -37,6 +39,7 @@ const useStyles = (colorMode) => ({
     "&:hover": {
       textDecoration: "underline",
       color: colorMode === "dark" ? " #90caf9" : "inherit",
+      opacity: ".5",
     },
   },
 });
