@@ -18,6 +18,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ColorModeContext } from "../../App";
 import { pageRoutes } from "../../app/pageRoutes";
 import useStyles from "./styles";
+import AnimatedCursor from "react-animated-cursor";
 
 const { home, about, contact } = pageRoutes;
 
@@ -47,6 +48,25 @@ const NavBar = () => {
 
   return (
     <AppBar>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={35}
+        innerScale={1}
+        outerScale={1.7}
+        outerAlpha={0}
+        showSystemCursor
+        outerStyle={{
+          border: `1px solid ${
+            theme.palette.mode === "light" ? "#90caf9" : "#ffffff"
+          }`,
+        }}
+        innerStyle={{
+          backgroundColor: `${
+            theme.palette.mode === "light" ? "#90caf9" : "#ffffff"
+          }`,
+        }}
+        trailingSpeed={4}
+      />
       <Container>
         <Toolbar disableGutters>
           <Grid container alignItems="center">

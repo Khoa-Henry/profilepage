@@ -16,6 +16,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { HelmetProvider } from "react-helmet-async";
+import AnimatedCursor from "react-animated-cursor";
 
 const { home, about, contact } = pageRoutes;
 
@@ -60,6 +61,21 @@ function App() {
     <HelmetProvider context={helmetContext}>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={1}
+            outerScale={1.7}
+            outerAlpha={0}
+            showSystemCursor
+            outerStyle={{
+              border: `1px solid ${mode === "light" ? "#90caf9" : "#ffffff"}`,
+            }}
+            innerStyle={{
+              backgroundColor: `${mode === "light" ? "#90caf9" : "#ffffff"}`,
+            }}
+            trailingSpeed={4}
+          />
           <CssBaseline />
           <Router>
             <NavBar />
