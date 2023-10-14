@@ -29,7 +29,7 @@ export const resumeInfo = [
       },
       {
         companyName: "i.c.stars |* Milwaukee",
-        subTitle: "Soft Engineer Intern * Jul 2020 - Nov 2020",
+        subTitle: "Software Engineer Intern * Jul 2020 - Nov 2020",
         info: [
           "Initialized the process of designing a wireframe, and a workflow model, and using React.js to build a mobile app. (Paylocity App) ",
           "Collaborated with the team and end-users to identify requirements, designs, and solutions for our client, Paylocity. Reimagine the current Paylocity App to a modern application that engages the user and builds a community for all users.",
