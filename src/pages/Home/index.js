@@ -1,20 +1,20 @@
-import React from "react";
-import useStyles from "./styles";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Me from "../../Pics/me.jpg";
+import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import gitHub from "../../Pics/github.png";
-import gitHubDark from "../../Pics/github-dark.png";
-import linkedin from "../../Pics/linkendin.png";
-import linkedinDark from "../../Pics/linkedin-dark.png";
-import { pageRoutes } from "../../app/pageRoutes";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
 import SEO from "../../Components/SEO";
+import gitHubDark from "../../Pics/github-dark.png";
+import gitHub from "../../Pics/github.png";
+import linkedinDark from "../../Pics/linkedin-dark.png";
+import linkedin from "../../Pics/linkendin.png";
+import Me from "../../Pics/me.jpg";
+import { pageRoutes } from "../../app/pageRoutes";
+import useStyles from "./styles";
+import "./styles.css";
 
 const Home = () => {
   const theme = useTheme();
@@ -55,7 +55,7 @@ const Home = () => {
               Khoa Henry Nguyen
             </Typography>
             <Typography variant="h4" color="primary">
-              Application Development Engineer at American Family Insurance
+              Senior Engineer at American Family Insurance
             </Typography>
             <Typography variant="h6" style={styles.spacing}>
               Experienced Front-end Developer with a robust skill set

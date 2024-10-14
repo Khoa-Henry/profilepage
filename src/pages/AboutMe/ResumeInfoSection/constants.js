@@ -16,7 +16,7 @@ export const resumeInfo = [
     data: [
       {
         companyName: "American Family Insurance",
-        subTitle: "Application Development Engineer * Nov 2020 - Present",
+        subTitle: "Senior Engineer * Nov 2020 - Present",
         info: [
           "Developed AMFAM’s digital sales platform for auto to retire AMFAM’s old auto sales tool (Highest Priority).",
           "Constructed the integration of The General insurance to be part of the sales tool when a user is not qualified.",
