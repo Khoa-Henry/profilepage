@@ -25,7 +25,7 @@ export const resumeInfo = [
       },
       {
         companyName: "American Family Insurance",
-        subTitle: "Application Development Engineer * Nov 2020 - May 2020",
+        subTitle: "Application Development Engineer * Nov 2020 - May 2024",
         info: [
           "Developed AMFAM’s Digital Sales Platform (DSP) for auto to retire AMFAM’s old auto sales tool (Highest Priority).",
           "Constructed the integration of The General insurance to be part of the sales tool when a user is not qualified.",
