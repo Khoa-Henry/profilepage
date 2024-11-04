@@ -16,9 +16,18 @@ export const resumeInfo = [
     data: [
       {
         companyName: "American Family Insurance",
-        subTitle: "Senior Engineer * Nov 2020 - Present",
+        subTitle: "Senior Engineer * May 2020 - Present",
         info: [
-          "Developed AMFAM’s digital sales platform for auto to retire AMFAM’s old auto sales tool (Highest Priority).",
+          "Collaborated with a team to develop auto insurance-specific components for integration into American Family Insurance (AmFam) applications, enhancing functionality and user experience across multiple platforms.",
+          "Supported a multi-carrier framework for AmFam's online insurance purchasing tool, ensuring a seamless experience for users selecting different insurance providers.",
+          "Facilitated a transition to Midvale Indemnity Company as the underwriter for specific states, implementing additional questions and custom flows to meet unique underwriting requirements.",
+        ],
+      },
+      {
+        companyName: "American Family Insurance",
+        subTitle: "Application Development Engineer * Nov 2020 - May 2020",
+        info: [
+          "Developed AMFAM’s Digital Sales Platform (DSP) for auto to retire AMFAM’s old auto sales tool (Highest Priority).",
           "Constructed the integration of The General insurance to be part of the sales tool when a user is not qualified.",
           "Created the payment details page, sign documents page, premium summary page, payment options page, vin validation feature, and city/state prefill feature.",
           "Incorporated multiple products (auto, home, etc.) in the application for bundling features.",
@@ -61,15 +70,16 @@ export const resumeInfo = [
         subTitle: "",
         info: [
           "React JS",
+          "Vue.js",
           "Git",
           "AWS",
           "TypeScript",
           "JavaScript",
           "Jest",
           "HTML/CSS",
-          "Scrum",
           "SQL",
           "C++",
+          "Java",
         ],
       },
     ],

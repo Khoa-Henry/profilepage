@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import useStyles from "./styles";
-import Grid from "@mui/material/Grid";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import gitHub from "../../../Pics/github.png";
-import gitHubDark from "../../../Pics/github-dark.png";
-import { resumeInfo } from "./constants";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import { useTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import React, { useState } from "react";
+import gitHubDark from "../../../Pics/github-dark.png";
+import gitHub from "../../../Pics/github.png";
+import { resumeInfo } from "./constants";
+import useStyles from "./styles";
 
 const ResumeInfoSection = () => {
   const theme = useTheme();
@@ -50,6 +50,7 @@ const ResumeInfoSection = () => {
                       <Accordion
                         expanded={expanded === `panel${i}`}
                         onChange={handleChange(`panel${i}`)}
+                        key={i}
                       >
                         <AccordionSummary
                           expandIcon={<ExpandMoreIcon />}
