@@ -9,7 +9,7 @@ const useStyles = (colorMode) => ({
   },
   imageMobile: {
     borderRadius: "50%",
-    width: "60%",
+    width: "206px",
   },
   imageContainer: {
     textAlign: "center",
