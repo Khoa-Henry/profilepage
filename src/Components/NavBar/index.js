@@ -14,11 +14,11 @@ import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useContext, useState } from "react";
+import AnimatedCursor from "react-animated-cursor";
 import { Link, useLocation } from "react-router-dom";
 import { ColorModeContext } from "../../App";
 import { pageRoutes } from "../../app/pageRoutes";
 import useStyles from "./styles";
-import AnimatedCursor from "react-animated-cursor";
 
 const { home, about, contact } = pageRoutes;
 
@@ -69,7 +69,7 @@ const NavBar = () => {
       />
       <Container>
         <Toolbar disableGutters>
-          <Grid container alignItems="center">
+          <Grid container alignItems="center" justifyContent="center">
             {isMobile ? (
               <>
                 <Grid item xs="auto">
