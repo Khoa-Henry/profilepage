@@ -1,22 +1,22 @@
-import React from "react";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import Home from "./pages/Home";
+import Footer from "./Components/Footer";
+import NavBar from "./Components/NavBar";
+import { pageRoutes } from "./app/pageRoutes";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer";
-import { pageRoutes } from "./app/pageRoutes";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { HelmetProvider } from "react-helmet-async";
-import AnimatedCursor from "react-animated-cursor";
+
+import Home from "./pages/Home";
 
 const { home, about, contact } = pageRoutes;
 
@@ -61,7 +61,7 @@ function App() {
     <HelmetProvider context={helmetContext}>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
-          <AnimatedCursor
+          {/* <AnimatedCursor
             innerSize={5}
             outerSize={35}
             innerScale={1}
@@ -75,7 +75,7 @@ function App() {
               backgroundColor: `${mode === "light" ? "#90caf9" : "#ffffff"}`,
             }}
             trailingSpeed={4}
-          />
+          /> */}
           <CssBaseline />
           <Router>
             <NavBar />
